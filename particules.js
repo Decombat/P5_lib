@@ -2,7 +2,7 @@ let system = [];
 let img;
 
 function preload() {
-  img = loadImage('https://66.media.tumblr.com/6d5ceb0863c4adfa7cfb1b16ccd40a5c/tumblr_p0ajd4b4uy1rr6w39o2_1280.jpg');
+  img = loadImage('https://raw.githubusercontent.com/cobra-foutre/P5_lib/master/txt_1.jpg');
 }
 
 function setup() {
@@ -10,7 +10,6 @@ function setup() {
 }
 
 function draw() {
-  image(img, 0, 0);
   for (var i = 0; i < system.length; i++) {
     system[i].addsys();
   }
@@ -41,7 +40,7 @@ System.prototype.addsys = function() {
 let Particule = function(position) {
   this.pos = position.copy();
   this.vel = createVector(random(-0.5, 0.5), random(-0.5, 0.5));
-  this.acc = createVector(0, 0.05);
+  this.acc = createVector(0, -0.05);
   this.lifespan = 250;
 }
 
@@ -53,7 +52,7 @@ Particule.prototype.update = function() {
 
 Particule.prototype.display = function() {
   strokeWeight(1);
-  ellipse(this.pos.x, this.pos.y, 2, 2);
+  blend(img, this.pos.x, this.pos.y, ADD);
 }
 
 Particule.prototype.isDead = function() {
