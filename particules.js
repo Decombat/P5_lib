@@ -2,7 +2,7 @@ let system = [];
 let img;
 
 function preload() {
-  img = loadImage('https://raw.githubusercontent.com/cobra-foutre/P5_lib/master/txt_1.png');
+  img = loadImage('https://raw.githubusercontent.com/cobra-foutre/P5_lib/master/txt_2.png');
 }
 
 function setup() {
@@ -10,6 +10,7 @@ function setup() {
 }
 
 function draw() {
+  background(255);
   for (var i = 0; i < system.length; i++) {
     system[i].addsys();
   }
