@@ -2,7 +2,7 @@ let system = [];
 let img;
 
 function preload() {
-  img = loadImage('https://raw.githubusercontent.com/cobra-foutre/P5_lib/master/txt_1.jpg');
+  img = loadImage('https://raw.githubusercontent.com/cobra-foutre/P5_lib/master/txt_1.png');
 }
 
 function setup() {
@@ -52,7 +52,7 @@ Particule.prototype.update = function() {
 
 Particule.prototype.display = function() {
   strokeWeight(1);
-  blend(img, this.pos.x, this.pos.y, ADD);
+  image(img, this.pos.x, this.pos.y);
 }
 
 Particule.prototype.isDead = function() {
